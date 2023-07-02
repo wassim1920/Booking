@@ -10,7 +10,6 @@ import Login from "./pages/login/Login";
 import Registre from "./pages/register/Registre";
 import './App.css';
 
-import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {

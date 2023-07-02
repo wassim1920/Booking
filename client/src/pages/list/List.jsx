@@ -19,7 +19,7 @@ const List = () => {
   const [max, setMax] = useState(undefined);
 
 
-  const {data , loading , error , reFetch}= useFetch 
+  const {data , loading , reFetch}= useFetch 
   (`/hotels?city=${destination}&min=${min || 0}&max=${max  ||  9999999999}`) ;
 
   // Search button 
