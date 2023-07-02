@@ -27,7 +27,7 @@ const Hotel = () => {
    //if the user login
   const [openmodel, setOpenmodel] = useState(false);
   //
-  const {data , loading , error}= useFetch(`/hotels/find/${id}`);
+  const {data , loading }= useFetch(`/hotels/find/${id}`);
 
   const {dates , options }= useContext(SearchContext);
   const {user}=useContext(AuthContext);
