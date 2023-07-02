@@ -6,13 +6,13 @@
   gap: 30px;
   
 }
-@media(max-width:375px){
+@media( max-width:376px){
  .covid{
   opacity: 0;
   }
 
 }
-@media(max-width:375px) {
+@media(max-width:376px) {
   .header{
     width: 562px;
   }
@@ -71,9 +71,6 @@
    }
    .footer{
     width: 562px;
-   }
-   .fLists{
-    
    }
 }
 .homeTitle{
