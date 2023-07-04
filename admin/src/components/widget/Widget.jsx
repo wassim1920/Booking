@@ -12,7 +12,7 @@ const Widget = ({ type }) => {
   useEffect(() => {
     fetchData();
   }, []);
-
+ 
   const fetchData = async () => {
     try {
       let endpoint = "https://booking-app-0tls.onrender.com/api";
