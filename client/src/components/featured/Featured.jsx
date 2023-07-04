@@ -4,7 +4,7 @@ import "./featured.css";
 
 const Featured = () => {
   const { data, loading} = useFetch(
-    "https://booking-app-0tls.onrender.com/hotels/countByCity?cities=tunis,bizert,mahdia,hammamet,sousse"
+    "https://booking-app-0tls.onrender.com/api/hotels/countByCity?cities=tunis,bizert,mahdia,hammamet,sousse"
   );
 
 

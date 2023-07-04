@@ -20,7 +20,7 @@ const List = () => {
 
 
   const {data , loading , reFetch}= useFetch 
-  (`/hotels?city=${destination}&min=${min || 0}&max=${max  ||  9999999999}`) ;
+  (`https://booking-app-0tls.onrender.com/api/hotels?city=${destination}&min=${min || 0}&max=${max  ||  9999999999}`) ;
 
   // Search button 
   const handelClick =()=>{

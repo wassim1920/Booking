@@ -27,7 +27,7 @@ const Hotel = () => {
    //if the user login
   const [openmodel, setOpenmodel] = useState(false);
   //
-  const {data , loading }= useFetch(`/hotels/find/${id}`);
+  const {data , loading }= useFetch(`https://booking-app-0tls.onrender.com/api/hotels/find/${id}`);
 
   const {dates , options }= useContext(SearchContext);
   const {user}=useContext(AuthContext);
