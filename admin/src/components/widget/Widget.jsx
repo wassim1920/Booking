@@ -15,7 +15,7 @@ const Widget = ({ type }) => {
 
   const fetchData = async () => {
     try {
-      let endpoint = "";
+      let endpoint = "https://booking-app-0tls.onrender.com/api";
       switch (type) {
         case "user":
           endpoint = "/users/count";
@@ -30,7 +30,7 @@ const Widget = ({ type }) => {
           break;
       }
 
-      const response = await fetch("https://booking-app-0tls.onrender.com/api", endpoint);
+      const response = await fetch(endpoint);
       const data = await response.json();
       setCount(data.count);
     } catch (error) {
