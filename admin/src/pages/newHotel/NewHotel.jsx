@@ -37,11 +37,11 @@ const NewHotel = () => {
             const {public_id, url} = uploadRes.data
             return url
         })
-        );
+        ); 
         const newHotel = {
             ...info,rooms, photos : list,
         }; 
-        const res = await axios.post("https://booking-app-0tls.onrender.com/api/hotels" , newHotel)
+         await axios.post("https://booking-app-0tls.onrender.com/api/hotels" , newHotel)
     }catch(error){
         console.log(error)
     }
