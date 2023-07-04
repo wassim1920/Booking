@@ -10,7 +10,7 @@ const Widget = ({ type }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    fetchData("https://booking-app-0tls.onrender.com/api");
+    fetchData();
   }, []);
 
   const fetchData = async () => {
@@ -30,7 +30,7 @@ const Widget = ({ type }) => {
           break;
       }
 
-      const response = await fetch(endpoint);
+      const response = await fetch("https://booking-app-0tls.onrender.com/api", endpoint);
       const data = await response.json();
       setCount(data.count);
     } catch (error) {
