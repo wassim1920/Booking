@@ -12,8 +12,6 @@ import { AuthContext } from "./context/AuthContext";
 import { hotelColumns, roomColumns, userColumns } from "./datatablesource";
 import NewHotel from "./pages/newHotel/NewHotel";
 import NewRoom from "./pages/newRoom/newRoom";
-
-import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -48,25 +46,25 @@ function App() {
               <Route
                 index
                 element={
-                  <ProtectedRoute>
+                   
                     <List columns={userColumns} /> 
-                  </ProtectedRoute>
+                  
                 }
               />
               <Route
                 path=":userId"
                 element={
-                  <ProtectedRoute>
+                  
                     <Single />
-                  </ProtectedRoute>
+                  
                 }
               />
               <Route
                 path="new"
                 element={
-                  <ProtectedRoute>
+                 
                     <New inputs={userInputs} title="Add New User" />
-                  </ProtectedRoute>
+                 
                 }
               />
             </Route>
