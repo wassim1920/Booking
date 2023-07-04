@@ -1,6 +1,5 @@
 import "./datatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
-import { hotelColumns, userColumns, userRows } from "../../datatablesource";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import useFetch from "../../hooks/useFetch";
@@ -10,7 +9,7 @@ const Datatable = ( {columns} ) => {
   const location = useLocation();
   const path = location.pathname.split("/")[1];
   const [list, setList] = useState([]);
-  const { data, loading, error } = useFetch(`/${path}`);
+  const { data, loading, error } = useFetch(`https://booking-app-0tls.onrender.com/api/${path}`);
 
   useEffect(() => {
     setList(data);
@@ -18,7 +17,7 @@ const Datatable = ( {columns} ) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/${path}/${id}`);
+      await axios.delete(`https://booking-app-0tls.onrender.com/api/${path}/${id}`);
       setList(list.filter((item) => item._id !== id));
     } catch (err) {}
   };

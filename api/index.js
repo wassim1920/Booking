@@ -7,7 +7,7 @@ import hotelsRoute from "./routes/hotels.js"
 import roomsRoute from "./routes/rooms.js"
 import mailRoute from "./routes/mail.js"
 import cookieParser from "cookie-parser";
-// import cors from "cors";
+import cors from "cors";
 
 
 
@@ -27,8 +27,8 @@ mongoose.connection.on("disconnected" , ()=>{
     console.log("mongodb disconnected")
 })
 
-//middlewares
-// app.use(cors("http://localhost:8000/api"));
+// middlewares
+app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 

@@ -26,7 +26,7 @@ const New = ({ inputs, title }) => {
           img : url , public_id, 
          } 
          console.log(newUser)
-         const res = await axios.post("/auth/registre" , newUser); 
+         const res = await axios.post("https://booking-app-0tls.onrender.com/api/auth/registre" , newUser); 
          console.log(res)
          
         

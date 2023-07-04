@@ -5,7 +5,7 @@ import {faLocationDot} from '@fortawesome/free-solid-svg-icons'
 
 
 const SearchItem = ({item}) => {
-  return (
+  return ( 
     <div className="searchItem">
       <img
         src={item.photos[0]}

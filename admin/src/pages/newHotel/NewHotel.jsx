@@ -41,7 +41,7 @@ const NewHotel = () => {
         const newHotel = {
             ...info,rooms, photos : list,
         }; 
-        const res = await axios.post("/hotels" , newHotel)
+        const res = await axios.post("https://booking-app-0tls.onrender.com/api/hotels" , newHotel)
     }catch(error){
         console.log(error)
     }

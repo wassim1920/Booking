@@ -40,7 +40,7 @@ const Registre = () => {
         public_id,
       };
       console.log(newUser);
-      const res = await axios.post("/auth/registre", newUser);
+      const res = await axios.post("https://booking-app-0tls.onrender.com/auth/registre", newUser);
       console.log(res);
     } catch (err) {
       console.log(err);
