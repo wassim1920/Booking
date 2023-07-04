@@ -16,7 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
-  const { darkMode } = useContext(DarkModeContext);
+  const { darkMode } = useContext(DarkModeContext);  
 
   const ProtectedRoute = ({ children }) => {
     const { user } = useContext(AuthContext);
