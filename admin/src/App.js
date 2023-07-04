@@ -46,25 +46,25 @@ function App() {
               <Route
                 index
                 element={
-                   
+                  <ProtectedRoute> 
                     <List columns={userColumns} /> 
-                  
+                  </ProtectedRoute>
                 }
               />
               <Route
                 path=":userId"
                 element={
-                  
+                  <ProtectedRoute>
                     <Single />
-                  
+                  </ProtectedRoute>
                 }
               />
               <Route
                 path="new"
                 element={
-                 
+                  <ProtectedRoute>
                     <New inputs={userInputs} title="Add New User" />
-                 
+                  </ProtectedRoute>
                 }
               />
             </Route>
