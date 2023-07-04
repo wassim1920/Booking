@@ -15,16 +15,16 @@ const Widget = ({ type }) => {
  
   const fetchData = async () => {
     try {
-      let endpoint = "https://booking-app-0tls.onrender.com/api";
+      let endpoint = "";
       switch (type) {
         case "user":
-          endpoint = "/users/count";
+          endpoint = "https://booking-app-0tls.onrender.com/api/users/count";
           break;
         case "hotel":
-          endpoint = "/hotels/count";
+          endpoint = "https://booking-app-0tls.onrender.com/api/hotels/count";
           break;
         case "room":
-          endpoint = "/rooms/count";
+          endpoint = "https://booking-app-0tls.onrender.com/api/rooms/count";
           break;
         default:
           break;
