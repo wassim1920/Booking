@@ -14,7 +14,7 @@ const NewHotel = () => {
   const [info, setInfo] = useState({});
   const [rooms, setRooms] = useState([]);
 
-  const {data , loading , error}=useFetch("/rooms")
+  const {data , loading , error}=useFetch("https://booking-app-0tls.onrender.com/api/rooms")
 
   const handelChange = (e)=>{
    setInfo((prev)=>({...prev,[e.target.id]: e.target.value }));

@@ -18,18 +18,17 @@ const Widget = ({ type }) => {
       let endpoint = "";
       switch (type) {
         case "user":
-          endpoint = "https://booking-app-0tls.onrender.com/api/users/count";
+          endpoint = "/users/count";
           break;
         case "hotel":
-          endpoint = "https://booking-app-0tls.onrender.com/api/hotels/count";
+          endpoint = "/hotels/count";
           break;
         case "room":
-          endpoint = "https://booking-app-0tls.onrender.com/api/rooms/count";
+          endpoint = "/rooms/count";
           break;
         default:
           break;
       }
-
       const response = await fetch(endpoint);
       const data = await response.json();
       setCount(data.count);
