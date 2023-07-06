@@ -6,7 +6,7 @@ import useFetch from "../../hooks/useFetch";
 import "./featuredProperties.css";
 
 const FeaturedProperties = () => {
-  const { data, loading } = useFetch("https://booking-app-0tls.onrender.com/api/hotels?featured=true");
+  const { data, loading } = useFetch("https://booking-aku5.onrender.com/api/hotels?featured=true");
 
   return (
     <div className="fp">

@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 const Reserve = ({ setOpen, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
-  const { data} = useFetch(`https://booking-app-0tls.onrender.com/api/hotels/room/${hotelId}`);
+  const { data} = useFetch(`https://booking-aku5.onrender.com/api/hotels/room/${hotelId}`);
   const { dates } = useContext(SearchContext);
   
 
