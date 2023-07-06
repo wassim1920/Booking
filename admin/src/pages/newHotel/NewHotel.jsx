@@ -14,7 +14,7 @@ const NewHotel = () => {
   const [info, setInfo] = useState({});
   const [rooms, setRooms] = useState([]);
 
-  const {data , loading , error}=useFetch("https://booking-app-0tls.onrender.com/api/rooms")
+  const {data , loading , error}=useFetch("https://booking-aku5.onrender.com/api/rooms")
 
   const handelChange = (e)=>{
    setInfo((prev)=>({...prev,[e.target.id]: e.target.value }));
@@ -41,7 +41,7 @@ const NewHotel = () => {
         const newHotel = {
             ...info,rooms, photos : list,
         }; 
-         await axios.post("https://booking-app-0tls.onrender.com/api/hotels" , newHotel)
+         await axios.post("https://booking-aku5.onrender.com/api/hotels" , newHotel)
     }catch(error){
         console.log(error)
     }
