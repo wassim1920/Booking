@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import "./login.css";
+import Registre from "../register/Registre"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faEnvelope , faMobile} from '@fortawesome/free-solid-svg-icons'
 import { ToastContainer, toast } from "react-toastify";
@@ -70,7 +71,7 @@ const Login = () => {
           Login
         </button>
         <div className="rrtext">
-         <a href="/registre"> create account</a>
+         <Link to={<Registre/>}>create account</Link>
         </div>
         {error && <span>{error.message}</span>}
         <p  className="logindesc">ou choisissez l'une de ces options</p>
