@@ -18,13 +18,13 @@ const Widget = ({ type }) => {
       let endpoint = "";
       switch (type) {
         case "user":
-          endpoint = "https://booking-app-0tls.onrender.com/api/users/count";
+          endpoint = "https://booking-aku5.onrender.com/users/count";
           break;
         case "hotel":
-          endpoint = "https://booking-app-0tls.onrender.com/api/hotels/count";
+          endpoint = "https://booking-aku5.onrender.com/api/hotels/count";
           break;
         case "room":
-          endpoint = "https://booking-app-0tls.onrender.com/api/rooms/count";
+          endpoint = "https://booking-aku5.onrender.com/api/rooms/count";
           break;
         default:
           break;
