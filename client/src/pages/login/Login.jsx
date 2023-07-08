@@ -43,7 +43,7 @@ const Login = () => {
     <div className="login">
       
       <header>
-        <Link to={"/"}>
+        <Link to={"/"} style={{ color: "inherit", textDecoration: "none" }}>
         <h2>Booking</h2>
         </Link>
       </header>
