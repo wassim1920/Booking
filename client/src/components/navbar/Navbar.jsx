@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navContainer">
-        <Link to="/">
+        <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
           <span className="logo">Booking.App</span>
         </Link>
 
