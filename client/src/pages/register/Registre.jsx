@@ -20,31 +20,53 @@ const Registre = () => {
 
   const handelClick = async (e) => {
     e.preventDefault();
-    const data = new FormData();
-    data.append("file", file);
-    data.append("upload_preset", "upload");
-    try {
-      const uploadRes = await axios.post(
-        "https://api.cloudinary.com/v1_1/dhb7jpopr/image/upload",
-        data
-      );
-      const { public_id, url } = uploadRes.data;
-      const newUser = {
+    
+    let newUser;
+    
+    if (file) {
+      const data = new FormData();
+      data.append("file", file);
+      data.append("upload_preset", "upload");
+      
+      try {
+        const uploadRes = await axios.post(
+          "https://api.cloudinary.com/v1_1/dhb7jpopr/image/upload",
+          data
+        );
+        
+        const { public_id, url } = uploadRes.data;
+        newUser = {
+          username,
+          password,
+          email,
+          phone,
+          country,
+          city,
+          img: url,
+          public_id,
+        };
+      } catch (err) {
+        console.log(err);
+        return;
+      }
+    } else {
+      newUser = {
         username,
         password,
         email,
         phone,
         country,
         city,
-        img: url,
-        public_id,
       };
-      console.log(newUser);
+    }
+    
+    try {
       const res = await axios.post("https://booking-aku5.onrender.com/api/auth/registre", newUser);
       console.log(res);
+      navigate("/login");
     } catch (err) {
       console.log(err);
-    }navigate("/login")
+    }
   };
 
   return (
