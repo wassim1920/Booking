@@ -7,7 +7,6 @@ import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const { user } = useContext(AuthContext);
-  // useEffect(AuthContext);
   const navigate = useNavigate();
   const handelClick = () => {
     navigate("/login");
@@ -17,15 +16,11 @@ const Navbar = () => {
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
-  // const handleSignOut = () => {
-  //    push ("/"); localStorage.removeItem ("token");
-  //  };
 
   const handelLogout = () => {
     localStorage.removeItem("user");
-    // document.cookie.removeItem("access_token")
-    navigate("/login");
-  };
+    window.location.reload();
+    };
   return (
     <div className="navbar">
       <div className="navContainer">

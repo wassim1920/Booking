@@ -1,8 +1,8 @@
-import axios from "axios";
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import "./login.css";
+import axios from "axios";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faEnvelope , faMobile} from '@fortawesome/free-solid-svg-icons'
 import { ToastContainer, toast } from "react-toastify";
@@ -29,7 +29,7 @@ const Login = () => {
     dispatch({ type: "LOGIN_START" });
     try {
       const res = await axios.post("https://booking-aku5.onrender.com/api/auth/login", credentials);
-      dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
+      dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details }); 
       navigate("/")
     } catch (err) {
       toast.error("Wrong password or userName !")
@@ -39,9 +39,7 @@ const Login = () => {
 
 
   return (
-    
     <div className="login">
-      
       <header>
         <Link to={"/"} style={{ color: "inherit", textDecoration: "none" }}>
         <h2>Booking</h2>
